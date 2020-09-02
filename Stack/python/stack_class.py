@@ -4,26 +4,29 @@ class Stack:
     def __init__(self):
         self.items = []
 
-    def  push(self, element): 
+    def push(self, element): 
         self.items.append(element) 
 
-    def  pop(self): 
+    def pop(self): 
         if len(self.items) == 0:
             print('Can not pop form an empty list')
-        self.items.pop();
+            return None
         print('Last item has been poped from the list')
+        return self.items.pop();
 
-    def  printStack(self): 
+    def printStack(self): 
         for i in self.items:
             print(i)
 
     def isEmpty(self):
-        print(len(self.items) == 0)
+        retun len(self.items) == 0
 
     def peek(self):
         if len(self.items) == 0:
             print('Stack is Empty')
+            return None
         print(self.items[len(self.items) - 1]) ;
+        return self.items[len(self.items) - 1]
         
 
 
